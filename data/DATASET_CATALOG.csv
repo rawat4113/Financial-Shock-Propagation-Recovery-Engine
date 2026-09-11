@@ -1,0 +1,16 @@
+id,filename,dataset,source,frequency,folder
+1,nifty50.csv,NIFTY 50,NSE India,daily,market_data
+2,indian_stocks.csv,50 Indian stocks,Yahoo Finance/NSE,daily,market_data
+3,sector_indices.csv,Indian sector indices,NSE India/Yahoo Finance,daily,market_data
+4,india_vix.csv,India VIX,NSE India,daily,financial_stress
+5,sp500.csv,S&P 500,FRED/Yahoo Finance,daily,market_data
+6,nasdaq.csv,NASDAQ Composite,Yahoo Finance,daily,market_data
+7,us_vix.csv,CBOE VIX,FRED,daily,financial_stress
+8,us10y.csv,US 10-Year Treasury,FRED,daily,macroeconomic_data
+9,fred_stlfsi4.csv,St. Louis Fed Financial Stress Index,FRED,weekly,financial_stress
+10,usdinr.csv,USD/INR,Yahoo Finance/RBI,daily,macroeconomic_data
+11,crude_oil.csv,WTI Crude Oil,FRED/Yahoo Finance,daily,market_data
+12,gold.csv,Gold,FRED/Yahoo Finance,daily,market_data
+13,india_gdp.csv,India GDP,World Bank,annual,macroeconomic_data
+14,india_inflation.csv,India Inflation,World Bank,annual,macroeconomic_data
+15,india_interest_rates.csv,India policy/repo rate,RBI DBIE,various,macroeconomic_data

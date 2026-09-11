@@ -1,0 +1,18 @@
+data:
+  start_date: "2010-01-01"
+  end_date: null
+
+features:
+  return_windows: [1, 5, 20]
+  volatility_windows: [5, 20, 60]
+
+shock_detection:
+  zscore_threshold: 3.0
+  isolation_forest_contamination: 0.02
+
+network:
+  correlation_threshold: 0.60
+
+recovery:
+  simulation_days: 90
+  recovery_rate: 0.05
