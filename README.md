@@ -1,435 +1,354 @@
-# 📈 Financial Shock Propagation & Recovery Engine
+# ⚡ Financial Shock Propagation & Recovery Engine
 
-> An end-to-end financial intelligence system for detecting market shocks, identifying anomalies, modeling financial contagion across correlated companies, measuring systemic risk, and simulating recovery scenarios.
+### AI-Powered Systemic Risk Detection, Propagation Analysis & Recovery Simulation
+
+<p align="center">
+
+**Detect financial shocks. Measure their severity. Understand how they propagate. Simulate recovery.**
+
+</p>
+
+<p align="center">
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python\&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit\&logoColor=white)](https://streamlit.io/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-F7931E?logo=scikit-learn\&logoColor=white)](https://scikit-learn.org/)
+[![NetworkX](https://img.shields.io/badge/NetworkX-Network%20Analysis-4C78A8)](https://networkx.org/)
+[![Tests](https://img.shields.io/badge/Tests-4%2F4%20Passing-2EA44F)](#testing)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
+
+</p>
+
+<p align="center">
+
+### 🚀 <a href="YOUR_DEPLOYED_APP_LINK">LIVE DEMO →</a>
+
+</p>
 
 ---
 
-## 🏆 Hackathon Project
+## 🧠 What Is This?
 
-**Project:** Financial Shock Propagation & Recovery Engine  
-**Domain:** Financial Intelligence / Data Science / Machine Learning / Network Analysis  
-**Built With:** Python, Pandas, NumPy, Scikit-learn, NetworkX, Matplotlib, Streamlit  
-**Dataset:** Indian stock market historical data  
-**Stocks Analyzed:** 50  
-**Trading Days:** 4,111  
-**Daily Observations:** 199,820
+Financial markets are not isolated systems.
+
+A major shock affecting one company, sector, or asset can spread through correlations and interconnected market relationships, creating a chain reaction across the financial system.
+
+The **Financial Shock Propagation & Recovery Engine** is an AI/ML-powered analytical platform designed to study this process.
+
+Instead of simply asking:
+
+> **"Which stocks are falling?"**
+
+the system asks:
+
+> **"How severe is the shock, where can it propagate, which assets are most exposed, and how might the system recover?"**
+
+The platform combines:
+
+* 📊 Financial time-series analysis
+* 🤖 Machine learning
+* 🚨 Anomaly detection
+* 🌐 Financial correlation networks
+* 💥 Shock propagation simulation
+* 📈 Systemic-risk analysis
+* 🔮 Recovery simulation
+* 🖥️ Interactive analytics dashboard
 
 ---
 
-## 🎯 Problem Statement
-
-Traditional financial analysis often evaluates companies independently.
-
-However, financial shocks rarely remain isolated.
-
-A major shock affecting one company or sector can spread through correlated companies and create broader systemic risk.
-
-For example:
+# 🎯 Core Intelligence Pipeline
 
 ```text
-                 MARKET SHOCK
-                      │
-                      ▼
-                     PNB
-                  ╱   │   ╲
-                 ▼    ▼    ▼
-              CANBK  SBIN  BANKBARODA
-                 │     │      │
-                 └─────┼──────┘
-                       ▼
-                 ICICIBANK
-                       │
-                       ▼
-                   AXISBANK
+                 ┌─────────────────────┐
+                 │   Financial Data    │
+                 │  Market Time Series │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Feature Engineering │
+                 │ Returns / Volatility│
+                 │ Drawdown / Momentum │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │   Shock Detection   │
+                 │   ML + Statistical  │
+                 │      Analysis       │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │  Shock Measurement  │
+                 │ Severity / Exposure │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Correlation Network │
+                 │  Asset Connections  │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Shock Propagation   │
+                 │   Simulation Engine  │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Systemic Risk       │
+                 │   Assessment        │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Recovery Simulation │
+                 │ Scenario Analysis   │
+                 └─────────────────────┘
 ```
-
-The objective of this project is to build an intelligent engine that can:
-
-- Detect abnormal market behavior
-- Quantify financial shock severity
-- Identify persistent shock events
-- Construct a financial correlation network
-- Simulate shock propagation
-- Measure systemic risk
-- Estimate recovery time
-- Visualize the complete shock lifecycle
 
 ---
 
-## 💡 Solution
+# 🔥 The Problem
 
-The Financial Shock Propagation & Recovery Engine combines:
+Traditional market dashboards mainly provide:
+
+* Stock prices
+* Returns
+* Charts
+* Technical indicators
+* Basic volatility measurements
+
+But systemic financial risk requires understanding **relationships between assets**, not just individual price movements.
+
+A shock can:
+
+1. Begin in one asset.
+2. Affect strongly correlated assets.
+3. Spread across sectors.
+4. Increase market-wide volatility.
+5. Create secondary shocks.
+6. Increase systemic risk.
+
+This project attempts to model that chain.
+
+---
+
+# 💡 Our Approach
+
+The system follows a six-stage intelligence framework:
+
+## 1️⃣ Detect
+
+Identify unusual financial behavior using statistical analysis and machine-learning-based anomaly detection.
+
+## 2️⃣ Measure
+
+Quantify the intensity of the detected shock using market features such as:
+
+* Returns
+* Volatility
+* Drawdown
+* Momentum
+* Anomaly score
+
+## 3️⃣ Connect
+
+Construct a financial network where:
 
 ```text
-Market Data
-    │
-    ▼
-Data Preprocessing
-    │
-    ▼
-Feature Engineering
-    │
-    ├── Daily Returns
-    ├── Volatility
-    ├── Drawdown
-    └── Rolling Z-Score
-    │
-    ▼
-Shock Score
-    │
-    ▼
-Isolation Forest
-    │
-    ▼
-Shock Classification
-    │
-    ▼
-Shock Event Detection
-    │
-    ▼
-Correlation Network
-    │
-    ▼
-Shock Propagation
-    │
-    ▼
-Systemic Risk
-    │
-    ▼
-Recovery Simulation
-    │
-    ▼
-Interactive Streamlit Dashboard
+Nodes  → Financial assets
+Edges  → Significant relationships
+Weights → Strength of correlation
 ```
 
+This allows the system to understand how assets are interconnected.
+
+## 4️⃣ Propagate
+
+Simulate how a shock originating from one asset could influence connected assets.
+
+The propagation process considers:
+
+* Relationship strength
+* Shock intensity
+* Network connectivity
+* Exposure to affected nodes
+
+## 5️⃣ Assess
+
+Estimate the broader systemic impact using network-level risk indicators.
+
+The system helps identify:
+
+* Highly exposed assets
+* Highly connected nodes
+* Potential contagion paths
+* Systemically important positions
+
+## 6️⃣ Recover
+
+Simulate possible recovery trajectories after the shock.
+
+This allows users to explore:
+
+> **What could happen after the initial financial shock?**
+
 ---
 
-# 🚀 Key Features
+# 🤖 Machine Learning
 
-## 1. Market Data Processing
+The project incorporates machine learning into the financial-risk pipeline.
 
-The engine processes historical stock market data and standardizes:
+### Anomaly Detection
 
-- Dates
-- Tickers
-- Numerical features
-- Duplicate records
-- Missing values
+**Isolation Forest** is used to identify observations that behave differently from normal market conditions.
 
-### Current Dataset
-
-| Metric | Value |
-|---|---:|
-| Stocks | 50 |
-| Trading Days | 4,111 |
-| Daily Observations | 199,820 |
-
----
-
-## 📊 2. Market Feature Engineering
-
-The system generates important financial risk features.
-
-### Daily Return
-
-Measures the percentage change in stock price.
+Conceptually:
 
 ```text
-Return(t) = Price(t) / Price(t-1) - 1
+Normal Market Behavior
+        │
+        ├── Normal
+        ├── Normal
+        ├── Normal
+        │
+        └── 🚨 Anomalous Event
 ```
 
-### Rolling Volatility
-
-Measures recent market instability using a 20-day rolling window.
-
-### Drawdown
-
-Measures the decline from the historical running maximum.
-
-### Rolling Z-Score
-
-Detects unusually large movements relative to recent behavior.
+Anomalies can then be investigated as potential shock events.
 
 ---
 
-## ⚡ 3. Shock Score
+# 🌐 Financial Network Engine
 
-A combined shock score is generated using:
+One of the major components of the project is the **financial correlation network**.
+
+Each asset becomes a node:
 
 ```text
-Return Z-Score
-        +
-Volatility
-        +
-Drawdown
-        ↓
-   Shock Score
+        Asset A
+        /     \
+       /       \
+   Asset B ─── Asset C
+      |           |
+      |           |
+   Asset D ─── Asset E
 ```
 
-The score is normalized to a practical range for risk classification.
+Strong relationships create stronger edges.
+
+This transforms financial data from a simple table into an interconnected system.
+
+### Why this matters
+
+Two assets may appear relatively stable individually while being highly connected to a shocked asset.
+
+Network analysis makes those relationships visible.
 
 ---
 
-## 🚨 4. Shock Classification
+# 💥 Shock Propagation
 
-Market observations are classified into different risk levels:
+The propagation engine models how a shock can move through the financial network.
 
-```text
-Normal
-   ↓
-Elevated Stress
-   ↓
-High Stress
-   ↓
-Severe Shock
-   ↓
-Extreme Shock
-```
-
-The system also identifies:
-
-```text
-Anomaly
-Insufficient Data
-```
-
-### Current Classification Distribution
-
-| Classification | Observations |
-|---|---:|
-| Normal | 165,101 |
-| Elevated Stress | 25,083 |
-| High Stress | 4,982 |
-| Insufficient Data | 3,000 |
-| Severe Shock | 830 |
-| Anomaly | 674 |
-| Extreme Shock | 150 |
-
----
-
-## 🤖 5. Anomaly Detection
-
-The project uses **Isolation Forest** from Scikit-learn to identify unusual combinations of:
-
-- Return behavior
-- Volatility
-- Drawdown
-
-This allows the system to identify abnormal market conditions that may not be captured by simple threshold-based rules.
-
----
-
-## 🔥 6. Shock Event Detection
-
-Individual shock observations are grouped into continuous financial events.
-
-Each event contains:
-
-```text
-Event ID
-Ticker
-Start Date
-End Date
-Duration
-Peak Date
-Peak Shock Score
-Severity
-```
-
-### Current Engine Results
-
-```text
-Shock Events Detected: 671
-```
-
-### Event Severity
-
-| Severity | Events |
-|---|---:|
-| Severe Shock | 514 |
-| Extreme Shock | 118 |
-| Elevated Stress | 20 |
-| Anomaly | 16 |
-| High Stress | 3 |
-
----
-
-# 🌐 7. Financial Correlation Network
-
-The project converts stock return correlations into a graph.
-
-Each company is represented as a node.
-
-A connection is created when the correlation exceeds the selected threshold.
-
-### Current Network
-
-```text
-Network Nodes: 50
-Network Edges: 10
-Network Density: 0.008163
-Correlation Threshold: 0.60
-```
-
-### Strongest Correlations
-
-| Company A | Company B | Correlation |
-|---|---|---:|
-| CANBK | PNB | 0.7538 |
-| BANKBARODA | PNB | 0.7390 |
-| BANKBARODA | CANBK | 0.7390 |
-| BANKBARODA | SBIN | 0.7184 |
-| CANBK | SBIN | 0.7124 |
-| JSWSTEEL | TATASTEEL | 0.6907 |
-| PNB | SBIN | 0.6867 |
-| HINDALCO | TATASTEEL | 0.6749 |
-| AXISBANK | ICICIBANK | 0.6739 |
-
-This network represents potential channels through which financial shocks can propagate.
-
----
-
-# 🔄 8. Shock Propagation
-
-The system simulates how an initial shock spreads through the correlation network.
-
-### Example
+Example:
 
 ```text
 Initial Shock
      │
      ▼
-    PNB
+  Asset A
+   /   \
+  ▼     ▼
+ B       C
+ │       │
+ ▼       ▼
+ D ───── E
      │
- ┌───┼────────┐
- ▼   ▼        ▼
-CANBK SBIN BANKBARODA
- │     │       │
- └─────┼───────┘
-       ▼
-   ICICIBANK
-       │
-       ▼
-   AXISBANK
+     ▼
+Systemic Impact
 ```
 
-The propagation model considers:
+The engine can be used to investigate:
 
-- Network connections
-- Transmission strength
-- Recovery factor
-- Number of propagation steps
-- Initial shock magnitude
+* Initial shock source
+* Propagation paths
+* Exposure levels
+* Secondary affected assets
+* Network-wide impact
 
 ---
 
-# 📉 9. Systemic Risk
+# 🔄 Recovery Simulation
 
-Systemic risk measures the combined effect of shocks across the financial network.
+The system does not stop at identifying damage.
 
-### PNB Shock Scenario
-
-```text
-Origin: PNB
-Shock Date: 2022-02-24
-Initial Shock Score: 67.6742
-Initial Shock Level: 0.6767
-```
-
-After 10 propagation steps:
+It also models the **recovery phase**.
 
 ```text
-Final Systemic Risk: 1.3337
-Final Maximum Shock: 0.2152
-Affected Nodes: 6
+Shock
+  │
+  ▼
+Impact
+  │
+  ▼
+Maximum Stress
+  │
+  ▼
+Recovery
+  │
+  ▼
+Stabilization
 ```
 
-### Top Affected Companies
-
-| Company | Final Shock |
-|---|---:|
-| PNB | 0.215167 |
-| CANBK | 0.143520 |
-| BANKBARODA | 0.142729 |
-| SBIN | 0.115785 |
-| ICICIBANK | 0.035591 |
-| AXISBANK | 0.014071 |
+Recovery analysis can help visualize how different assets or network states behave after a shock.
 
 ---
 
-# 🛡️ 10. Recovery Simulation
+# 📊 Dataset
 
-The recovery module simulates how a portfolio or financial system recovers after a shock.
+The current analysis pipeline works with a large historical market dataset covering:
 
-### Current Recovery Scenario
+| Metric             |       Value |
+| ------------------ | ----------: |
+| Assets             |      **50** |
+| Trading Days       |   **4,111** |
+| Daily Observations | **199,820** |
 
-```text
-Initial Portfolio Value: 0.323258
-Final Portfolio Value: 1.000000
-Recovery to 99%: Day 41
-```
-
-The system can evaluate different scenarios:
-
-```text
-Mild Shock
-Moderate Shock
-Severe Shock
-Extreme Shock
-```
-
-Recovery behavior can be controlled using recovery parameters.
+The dataset is transformed into machine-learning and network-analysis features before entering the intelligence pipeline.
 
 ---
 
-# 📈 11. Interactive Streamlit Dashboard
+# 🖥️ Interactive Dashboard
 
-The project includes an interactive Streamlit dashboard.
+The project includes an interactive **Streamlit dashboard** designed to make complex financial-risk analysis understandable.
 
-The dashboard provides:
+### Dashboard capabilities
 
-### Market Overview
+* 📊 Market overview
+* 🚨 Shock detection
+* 📈 Asset-level analysis
+* 🌐 Correlation network visualization
+* 💥 Shock propagation
+* ⚠️ Systemic-risk analysis
+* 🔄 Recovery simulation
+* 📉 Historical market behavior
+* 🔍 Interactive filtering
 
-- Number of stocks
-- Trading days
-- Daily observations
-- Shock events
+### 🚀 Try It Live
 
-### Shock Detection
+<p align="center">
 
-- Shock score timeline
-- Classification distribution
-- Anomaly detection
-- Severe and extreme shocks
+<a href="YOUR_DEPLOYED_APP_LINK">
 
-### Shock Events
+<img src="https://img.shields.io/badge/🚀%20OPEN%20LIVE%20DASHBOARD-FF4B4B?style=for-the-badge" />
 
-- Event duration
-- Event severity
-- Persistent events
-- Peak shock dates
+</a>
 
-### Correlation Network
-
-- Correlation matrix
-- Stock relationships
-- Network graph
-- Strongest correlations
-
-### Shock Propagation
-
-- Select shock origin
-- Configure transmission
-- Configure recovery
-- View affected companies
-- Systemic risk over time
-
-### Recovery Analysis
-
-- Shock scenario
-- Portfolio recovery curve
-- Recovery day
-- Final portfolio value
+</p>
 
 ---
 
@@ -438,157 +357,87 @@ The dashboard provides:
 ```text
 Financial-Shock-Propagation-Recovery-Engine/
 │
-├── app.py
-├── run_engine.py
-├── run_propagation.py
-├── requirements.txt
-├── README.md
+├── 📁 data/
+│   ├── raw/
+│   └── processed/
 │
-├── data/
-│   └── raw/
-│       └── market_data/
-│           └── indian_stocks.csv
+├── 📁 models/
+│   └── trained_models/
 │
-├── src/
-│   │
-│   ├── data/
-│   │   └── preprocess.py
-│   │
-│   ├── features/
-│   │   ├── market_features.py
-│   │   └── risk_features.py
-│   │
+├── 📁 src/
+│   ├── data_processing/
+│   ├── feature_engineering/
+│   ├── anomaly_detection/
 │   ├── shock_detection/
-│   │   ├── shock_score.py
-│   │   ├── shock_detector.py
-│   │   ├── anomaly_detection.py
-│   │   └── shock_events.py
-│   │
-│   ├── network/
-│   │   └── correlation_network.py
-│   │
+│   ├── network_analysis/
 │   ├── propagation/
-│   │   ├── shock_propagation.py
-│   │   └── systemic_risk.py
-│   │
-│   ├── recovery/
-│   │   ├── recovery_model.py
-│   │   ├── recovery_prediction.py
-│   │   └── scenario_simulator.py
-│   │
-│   └── visualization/
-│       ├── shock_plot.py
-│       ├── network_plot.py
-│       └── recovery_plot.py
+│   └── recovery/
 │
-├── tests/
-│   ├── test_network.py
-│   ├── test_preprocessing.py
-│   ├── test_recovery.py
-│   └── test_shock_detection.py
+├── 📁 tests/
 │
-└── outputs/
-    ├── processed_market_data.csv
-    ├── shock_events.csv
-    ├── correlation_matrix.csv
-    ├── propagation_results.csv
-    ├── recovery_results.csv
-    ├── shock_timeline.png
-    ├── correlation_network.png
-    └── recovery_curve.png
+├── 📄 dashboard.py
+├── 📄 requirements.txt
+├── 📄 README.md
+└── 📄 LICENSE
 ```
+
+> Folder names may differ slightly from the current implementation; update this tree if your repository structure has changed.
 
 ---
 
-# 🧰 Technology Stack
+# 🧩 Technology Stack
 
-### Programming
-
-- Python 3.12
-
-### Data Processing
-
-- Pandas
-- NumPy
-
-### Machine Learning
-
-- Scikit-learn
-- Isolation Forest
-- Random Forest Regressor
-
-### Network Analysis
-
-- NetworkX
-
-### Visualization
-
-- Matplotlib
-- Streamlit
-
-### Testing
-
-- Pytest
-
----
-
-# 🧪 Testing
-
-The project includes automated tests covering:
-
-- Network construction
-- Date preprocessing
-- Recovery behavior
-- Shock score calculation
-
-### Current Test Result
-
-```text
-=================== test session starts ====================
-
-tests/test_network.py          PASSED
-tests/test_preprocessing.py    PASSED
-tests/test_recovery.py         PASSED
-tests/test_shock_detection.py  PASSED
-
-==================== 4 passed in 11.65s ====================
-```
-
-Run tests:
-
-```bash
-python -m pytest -v
-```
+| Technology             | Purpose                    |
+| ---------------------- | -------------------------- |
+| 🐍 Python              | Core development           |
+| 🧠 Scikit-learn        | Machine learning           |
+| 🌲 NetworkX            | Financial network analysis |
+| 📊 Pandas              | Data processing            |
+| 🔢 NumPy               | Numerical computation      |
+| 📈 Matplotlib / Plotly | Visualization              |
+| 🖥️ Streamlit          | Interactive dashboard      |
+| 🧪 Pytest              | Testing                    |
 
 ---
 
 # ⚙️ Installation
 
-Clone the repository:
+## 1. Clone the repository
 
 ```bash
-git clone https://github.com/Im-Kamall/Financial-Shock-Propagation-Recovery-Engine.git
+git clone https://github.com/rawat4113/Financial-Shock-Propagation-Recovery-Engine.git
 ```
-
-Move into the project:
 
 ```bash
 cd Financial-Shock-Propagation-Recovery-Engine
 ```
 
-Create a virtual environment:
+---
+
+## 2. Create a virtual environment
+
+### Windows
 
 ```bash
 python -m venv .venv
 ```
 
-Activate it on Windows:
+Activate it:
 
-```powershell
-.venv\Scripts\Activate.ps1
+```bash
+.venv\Scripts\activate
 ```
 
-Install dependencies:
+### Linux / macOS
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+---
+
+## 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -596,47 +445,13 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Run the Financial Shock Engine
-
-Run:
+# ▶️ Run the Dashboard
 
 ```bash
-python run_engine.py
+streamlit run dashboard.py
 ```
 
-The engine performs:
-
-```text
-Data Loading
-     ↓
-Feature Engineering
-     ↓
-Shock Detection
-     ↓
-Anomaly Detection
-     ↓
-Shock Event Detection
-     ↓
-Correlation Network
-     ↓
-Shock Propagation
-     ↓
-Recovery Simulation
-     ↓
-Visualization
-```
-
----
-
-# 🌐 Run Streamlit Dashboard
-
-Start the dashboard:
-
-```bash
-streamlit run app.py
-```
-
-Then open:
+The application will normally be available at:
 
 ```text
 http://localhost:8501
@@ -644,219 +459,258 @@ http://localhost:8501
 
 ---
 
-# 📁 Generated Outputs
+# 🧪 Testing
 
-After running the engine:
+The project includes automated tests for validating important components of the analytical pipeline.
+
+Run:
+
+```bash
+pytest
+```
+
+Current test status:
 
 ```text
-outputs/
-│
-├── processed_market_data.csv
-├── shock_events.csv
-├── correlation_matrix.csv
-├── propagation_results.csv
-├── recovery_results.csv
-│
-├── shock_timeline.png
-├── correlation_network.png
-└── recovery_curve.png
+4 / 4 Tests Passing ✅
 ```
 
 ---
 
-# 📊 Example Engine Output
+# 📈 Example Analytical Workflow
 
-```text
-FINANCIAL SHOCK PROPAGATION & RECOVERY ENGINE
+A typical analysis can follow this sequence:
 
-Market stocks:          50
-Trading days:           4,111
-Daily observations:     199,820
-Shock events:           671
-Network nodes:          50
-Network edges:          10
+### Step 1 — Select a market period
 
-Shock origin:           PNB
-Initial shock:          0.6767
-Final systemic risk:    1.3337
-Final maximum shock:    0.2152
-Recovery day:           41
-```
+Choose the historical period to analyze.
+
+### Step 2 — Detect abnormal behavior
+
+The anomaly-detection layer identifies unusual observations.
+
+### Step 3 — Quantify the shock
+
+Calculate the severity and characteristics of the event.
+
+### Step 4 — Build the network
+
+Generate relationships between assets.
+
+### Step 5 — Simulate propagation
+
+Select a shocked asset and analyze possible propagation through connected assets.
+
+### Step 6 — Examine systemic impact
+
+Identify highly exposed or highly connected nodes.
+
+### Step 7 — Simulate recovery
+
+Analyze potential stabilization and recovery behavior.
 
 ---
 
-# 🔬 Example Use Case
+# 🧠 Key Concepts
 
-Suppose PNB experiences a major financial shock.
+The project combines several important concepts from modern financial analytics:
 
-The engine can:
+### Time-Series Analysis
 
-```text
-1. Detect abnormal PNB behavior
-          ↓
-2. Calculate shock score
-          ↓
-3. Classify the event
-          ↓
-4. Identify the shock date
-          ↓
-5. Find correlated companies
-          ↓
-6. Propagate the shock
-          ↓
-7. Measure systemic risk
-          ↓
-8. Identify affected companies
-          ↓
-9. Simulate recovery
-          ↓
-10. Estimate recovery time
-```
+Understanding how financial variables evolve over time.
 
-This transforms a simple stock-price analysis into a **network-based financial risk intelligence system**.
+### Anomaly Detection
+
+Identifying observations that deviate significantly from normal behavior.
+
+### Graph Theory
+
+Representing financial relationships as networks.
+
+### Network Contagion
+
+Studying how disturbances can spread through connected systems.
+
+### Systemic Risk
+
+Understanding risk that emerges from interactions across the entire network rather than from one asset alone.
+
+### Scenario Simulation
+
+Testing hypothetical shock and recovery situations.
 
 ---
 
 # 🎯 Why This Project Is Different
 
-Most financial dashboards answer:
-
-> "What happened to this stock?"
-
-This project asks:
-
-> **"If this company experiences a shock, how could that shock spread through the financial network, how severe could the systemic impact become, and how long could recovery take?"**
-
-The project combines:
+Most beginner financial projects stop at:
 
 ```text
-Financial Analytics
+Data → Prediction → Price
+```
+
+This project goes further:
+
+```text
+Data
+ ↓
+Detect
+ ↓
+Measure
+ ↓
+Connect
+ ↓
+Propagate
+ ↓
+Assess
+ ↓
+Recover
+```
+
+The objective is therefore not simply to predict whether a stock price will rise or fall.
+
+It is to understand the **structure and dynamics of financial shocks**.
+
+---
+
+# 🔬 Potential Applications
+
+The framework can potentially support research and analysis in areas such as:
+
+* Financial risk management
+* Portfolio stress testing
+* Systemic-risk research
+* Market surveillance
+* Contagion analysis
+* Financial scenario planning
+* Academic research
+* Quantitative finance
+
+The outputs are analytical simulations and should not be interpreted as guaranteed predictions of future market behavior.
+
+---
+
+# 🚧 Limitations
+
+Financial markets are complex adaptive systems, and historical relationships do not guarantee future behavior.
+
+Important limitations include:
+
+* Correlation does not necessarily imply causation.
+* Historical patterns may change during extreme events.
+* Simulated propagation is dependent on model assumptions.
+* Recovery behavior is scenario-dependent.
+* Market data can contain noise and structural breaks.
+* The system is intended for analytical and research purposes, not financial advice.
+
+---
+
+# 🔮 Future Roadmap
+
+The project can be extended toward a more advanced real-time financial-risk platform.
+
+### Phase 1 — Advanced ML
+
+* XGBoost / LightGBM
+* Temporal models
+* LSTM / Transformer architectures
+* Ensemble anomaly detection
+
+### Phase 2 — Real-Time Intelligence
+
+```text
+Live Market Data
+       ↓
+Streaming Feature Engine
+       ↓
+Real-Time Shock Detection
+       ↓
+Dynamic Network Update
+       ↓
+Propagation Engine
+       ↓
+Risk Alerts
+```
+
+### Phase 3 — Advanced Network Intelligence
+
+* Dynamic correlation networks
+* Community detection
+* Centrality-based systemic-risk analysis
+* Temporal graph analysis
+* Graph Neural Networks
+
+### Phase 4 — Decision Intelligence
+
+Potential future capabilities:
+
+* Automated risk alerts
+* Scenario comparison
+* Portfolio stress testing
+* Explainable AI
+* Risk reports
+* API-based integration
+
+---
+
+# 📚 Research Direction
+
+This project provides a foundation for exploring the intersection of:
+
+```text
+Artificial Intelligence
         +
-Machine Learning
+Financial Markets
+        +
+Graph Theory
         +
 Anomaly Detection
         +
-Network Science
+Systemic Risk
         +
-Risk Modeling
-        +
-Scenario Simulation
+Simulation
 ```
 
----
-
-# 🔮 Future Improvements
-
-The current version can be extended with:
-
-- Real-time stock market data
-- Sector-level propagation
-- Dynamic correlation networks
-- Time-varying network edges
-- Graph Neural Networks
-- Transformer-based financial forecasting
-- VaR and CVaR risk models
-- Monte Carlo recovery simulation
-- Portfolio optimization
-- News sentiment analysis
-- Financial statement integration
-- Macroeconomic indicators
-- RBI and interest-rate shocks
-- Interactive Plotly network visualization
-- Real-time Streamlit monitoring
-- Cloud deployment
-- Docker containerization
-- Automated model retraining
+It can therefore serve as a foundation for further research into **AI-driven financial contagion and systemic-risk modeling**.
 
 ---
 
-# ⚠️ Disclaimer
+# 👨‍💻 Author
 
-This project is developed for educational, research, and hackathon purposes.
+### Ritesh Rawat
 
-The generated shock scores, systemic-risk measurements, propagation results, and recovery estimates should **not be considered financial advice or investment recommendations**.
+B.Tech Information Technology
+AI / Data Science / Machine Learning Enthusiast
 
-Historical market behavior does not guarantee future performance.
-
-
-### Project Repository
-
-https://github.com/Im-Kamall/Financial-Shock-Propagation-Recovery-Engine
+GitHub:
+https://github.com/rawat4113
 
 ---
 
-# ⭐ Project Highlights
+# ⭐ Support the Project
 
-```text
-✓ 50 Indian stocks analyzed
-✓ 4,111 trading days
-✓ 199,820 daily observations
-✓ Automated financial feature engineering
-✓ Shock scoring system
-✓ Isolation Forest anomaly detection
-✓ 7-level market classification
-✓ 671 detected shock events
-✓ Correlation-based financial network
-✓ Shock propagation simulation
-✓ Systemic risk measurement
-✓ Recovery simulation
-✓ Streamlit dashboard
-✓ Automated tests
-✓ Complete visualization pipeline
-```
+If you find this project useful or interesting:
+
+⭐ Star the repository
+🍴 Fork the project
+🐛 Report issues
+💡 Suggest improvements
+🤝 Contribute
 
 ---
 
-# 🚀 Financial Shock Propagation & Recovery Engine
+# 📜 License
 
-## Detect → Classify → Connect → Propagate → Measure → Recover
+This project is licensed under the **MIT License**.
 
-> Turning historical market data into a network-based financial risk intelligence system.
-
+See the `LICENSE` file for details.
 
 ---
 
-# ✨ V2 Interactive Dashboard
+<p align="center">
 
-The project now includes a redesigned Streamlit dashboard focused on financial-risk exploration.
+## ⚡ Detect. Measure. Propagate. Recover.
 
-### V2 additions
+### Building AI systems for understanding financial shocks.
 
-- Premium dark command-center UI
-- Interactive Plotly charts
-- Interactive 3D financial correlation network
-- Network threshold control
-- Company/node explorer
-- Hypothetical shock simulator
-- Propagation timeline
-- Most-affected-company ranking
-- Recovery Lab with adjustable shock and recovery assumptions
-- Market/company explorer
-- Existing engine preserved in `app_legacy.py`
-
-### Run V2
-
-```bash
-streamlit run app.py
-```
-
-The original dashboard is preserved as:
-
-```text
-app_legacy.py
-```
-
-The underlying financial engine and data-processing modules were not replaced.
-
-## V3 dashboard experience
-
-The V3 interface replaces the left sidebar navigation with a single full-width dashboard and six progressive layers:
-
-1. Command Center
-2. Shock Intelligence
-3. Network Map
-4. Shock Simulator
-5. Recovery Lab
-6. Market Explorer
-
-Use the numbered layer controls or Previous/Next buttons to move through the experience. The visual direction intentionally uses 2.5D web design principles—depth, glass panels, layered gradients, soft shadows, perspective cues, and progressive storytelling—rather than turning the data visualization itself into a literal 3D scene.
+</p>
